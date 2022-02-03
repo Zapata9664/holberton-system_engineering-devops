@@ -1,1 +1,2 @@
-*En este repositorio en la carpeta 0x00-shell_basics se encuentra el proyecto de shell donde trabajamos algunos proyectos en linux*
+#!/bin/bash
+*proyecto shell*
