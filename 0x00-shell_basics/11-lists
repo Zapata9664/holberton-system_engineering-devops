@@ -1,2 +1,2 @@
 #!/bin/bash#
-ls -la ls /holberton-system_engineering-devops ls /root
+ls -la . .. /boot
