@@ -1,2 +1,2 @@
 #!/bin/bash
-tr A c c e
+tr "Az" "ce"
