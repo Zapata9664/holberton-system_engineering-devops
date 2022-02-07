@@ -1,2 +1,2 @@
 #!/bin/bash
-find . -mindepth l -type f |wc -l
+find . -typy f - mindepht 1 |wc -l
