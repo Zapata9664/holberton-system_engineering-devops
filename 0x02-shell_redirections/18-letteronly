@@ -1,2 +1,2 @@
 #!/bin/bash
-tr A z c e
+grep '^letter' /etc/ssh/sshd_config
