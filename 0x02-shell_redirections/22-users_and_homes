@@ -1,2 +1,2 @@
 #!/bin/bash
-cut users /etc/passwd | cut home directories /etc/passwd
+cut -d ':' -f1,10 /etc/passwd | sort
