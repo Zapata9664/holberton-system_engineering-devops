@@ -1,0 +1,1 @@
+*enn esta carpeta se encuentran proyectos de shell,init files, variables and expansions*
