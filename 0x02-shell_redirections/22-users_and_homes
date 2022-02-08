@@ -1,0 +1,2 @@
+#!/bin/bash
+cut users /etc/passwd | cut home directories /etc/passwd
