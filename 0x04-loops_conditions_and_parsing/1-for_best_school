@@ -3,5 +3,5 @@
 i=0
 for ((i; i <= 9; i++))
 do
-    echo "best school"
+    echo "Best school"
 done
