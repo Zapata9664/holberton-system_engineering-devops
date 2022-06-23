@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 #bad luck
-i=0
+i=1
 f=21
 while [ $i -lt $f ]
 do
