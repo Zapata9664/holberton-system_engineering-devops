@@ -1,0 +1,17 @@
+#!/usr/bin/env bash
+#bad luck
+i=0
+f=10
+while [ $i -lt $f ]
+do
+    if [ $i == 3 ]
+then
+    echo "bad luck"
+    elif [ $i == 7 ]
+then
+echo "good luck"
+else 
+echo "Best School"
+fi
+(( i+=1 ))
+done
