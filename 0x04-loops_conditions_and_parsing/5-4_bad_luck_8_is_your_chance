@@ -1,8 +1,7 @@
 #!/usr/bin/env bash
 #bad luck
 i=0
-f=10
-while [ $i -lt $f ]
+while [ $i -lt 10 ]
 do
     if [ $i == 3 ]
 then
