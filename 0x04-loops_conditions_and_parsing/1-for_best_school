@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
-#print best school ten times
-i = 0
+# This script is displaying "Best School" 10 times
+i=0
 for ((i; i <= 9; i++))
 do
     echo "best school"
