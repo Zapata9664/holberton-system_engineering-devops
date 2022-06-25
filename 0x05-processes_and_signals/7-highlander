@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+# Script bash displaying
+i=0
+f=3
+while [ $i -le $f ]
+do
+    trap "echo I am invincible!!!" SIGTERM
+    echo "To infinity and beyond"
+    sleep 2
+done
