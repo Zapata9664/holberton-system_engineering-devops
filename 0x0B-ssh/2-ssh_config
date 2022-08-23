@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+#connect to a server without typing a password.
+
+IdentityFile ~/.ssh/school
+PasswordAuthentication no
