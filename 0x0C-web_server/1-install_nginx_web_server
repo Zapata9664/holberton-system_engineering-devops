@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+# Transfers a file from our client to a server
+
+sudo apt-get -y update;
+sudo apt-get -y install nginx;
+sudo chmod 777 /var/www/html/index.nginx-debian.html;
+sudo service nginx start;
+sed -i '/80/8080/' /etc/nginx/sites-enabled/default;
+echo "Hello World" > /var/www/html/index.nginx-debian.html;
+nginx -s reload;
