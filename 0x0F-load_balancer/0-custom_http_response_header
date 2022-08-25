@@ -4,7 +4,6 @@
 sudo apt-get -y update;
 sudo apt-get -y upgrade;
 sudo apt-get -y install nginx;
-sudo service nginx start;
 sudo chmod 777 /var/www/html/index.nginx-debian.html;
 sudo chmod 777 /etc/nginx/sites-available/;
 sudo chmod 777 /etc/nginx/sites-available/default;
@@ -14,4 +13,4 @@ sed -i '/listen 80 default_server;/a add_header X-Served-By $hostname;' /etc/ngi
 
 echo "Ceci n'est pas une page" | sudo tee /var/www/html/404.html
 sed -i "/listen 80 default_server;/ a error_page 404 /404.html;" /etc/nginx/sites-available/default
-sudo service nginx restart
+sudo service nginx start;
