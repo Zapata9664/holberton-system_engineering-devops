@@ -14,4 +14,4 @@ echo "frontend LOADBALANCER-01
         balance roundrobin
         server 4536-web-01 54.234.51.91 check
         server 4536-web-02 50.17.115.236 check" >> /etc/haproxy/haproxy.cfg
-sudo service haproxy start;
+sudo service haproxy restart;
