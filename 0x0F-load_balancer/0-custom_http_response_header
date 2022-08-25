@@ -1,12 +1,18 @@
 #!/usr/bin/env bash
-# Install server
+# Configure web server 02
 
 sudo apt-get -y update;
+sudo apt-get -y upgrade;
 sudo apt-get -y install nginx;
-sudo chmod 777 /var/www/html/index.nginx-debian.html;
 sudo service nginx start;
-sed -i '/80/8080/' /etc/nginx/sites-enabled/default;
+sudo chmod 777 /var/www/html/index.nginx-debian.html;
+sudo chmod 777 /etc/nginx/sites-available/;
+sudo chmod 777 /etc/nginx/sites-available/default;
 echo "Hello World" > /var/www/html/index.nginx-debian.html;
 sed -i "/listen 80 default_server;/ a rewrite ^/redirect_me https://www.youtube.com/watch?v=QH2-TGUlwu4 permanent;" /etc/nginx/sites-available/default
-sudo sed -i '/listen 80 default_server;/a add_header X-Served-By $hostname;' /etc/nginx/sites-available/default
-nginx -s reload;
+
+sudo service nginx restart;
+
+echo "Ceci n'est pas une page" | sudo tee /var/www/html/404.html
+sed -i "/listen 80 default_server;/ a error_page 404 /404.html;" /etc/nginx/sites-available/default
+sudo service nginx restart
