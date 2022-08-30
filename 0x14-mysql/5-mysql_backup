@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+# generates a MySQL dump and creates a compressed archive out of it.
+sudo mysqldump -u holberton_user -p  tyrell_corp > backup.sql
+tar -czvf "$(date '+%d_%m_%Y')".tar.gz backup.sql
+
