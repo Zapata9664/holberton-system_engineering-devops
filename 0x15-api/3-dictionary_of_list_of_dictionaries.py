@@ -1,7 +1,6 @@
 #!/usr/bin/python3
 """ Gather data from an API """
 import json
-from xmlrpc.client import boolean
 import requests
 from sys import argv
 
@@ -26,8 +25,8 @@ def request_api():
         for index in json_t:
             my_dic = {'username': name_user, 'task': '', 'completed': None}
             task_title = index.get('title')
-            boolean = index.get('completed')
-            my_dic.update(task=task_title, completed=boolean)
+            true_false = index.get('completed')
+            my_dic.update(task=task_title, completed=true_false)
             list_json.append(my_dic)
         dict.update({str(var): list_json})
         with open("todo_all_employees.json", "a") as file:
