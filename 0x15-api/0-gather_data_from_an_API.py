@@ -1,13 +1,15 @@
 #!/usr/bin/python3
 """ Returns information about his/her data list progress. """
+
 import requests
 from sys import argv
 
 
-def API_request(argv):
+def request_api(argv):
     """Module for do request api"""
-    todo = "https://jsonplaceholder.typicode.com/todos/?userId=" + str(argv[1])
-    users = "https://jsonplaceholder.typicode.com/users/" + str(argv[1])
+    users = "https://jsonplaceholder.typicode.com/users/{}".format(argv[1])
+    todo = "https://jsonplaceholder.typicode.com/users/{}/todos".format(
+        argv[1])
 
     response_todo = requests.get(todo)
     response_user = requests.get(users)
@@ -32,4 +34,4 @@ def API_request(argv):
 
 
 if __name__ == "__main__":
-    API_request(argv)
+    request_api(argv)
