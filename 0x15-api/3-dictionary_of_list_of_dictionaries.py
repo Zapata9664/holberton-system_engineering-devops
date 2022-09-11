@@ -27,7 +27,7 @@ def request_api(argv):
         if (name_user is None):
             return
         for index in todo_json:
-            my_dic = {'task': '', 'completed': None, 'username': name_user}
+            my_dic = {'username': name_user, 'task': '', 'completed': None}
             task_title = index.get('title')
             boolean = index.get('completed')
             my_dic.update(task=task_title, completed=boolean)
