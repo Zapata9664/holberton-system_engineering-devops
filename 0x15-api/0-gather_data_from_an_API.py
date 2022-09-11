@@ -1,6 +1,5 @@
 #!/usr/bin/python3
 """ Returns information about his/her data list progress. """
-
 import requests
 from sys import argv
 
