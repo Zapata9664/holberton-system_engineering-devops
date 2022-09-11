@@ -27,7 +27,8 @@ def request_api(argv):
             my_list += [tasks['title']]
             task_do += 1
 
-    print(f"Employee {name_user} is done with tasks({task_do}/{task_done}):")
+    print("Employee {} is done with tasks({}/{}):"
+          .format(name_user, task_do, task_done))
 
     for count in my_list:
         print('\t', str(count))
