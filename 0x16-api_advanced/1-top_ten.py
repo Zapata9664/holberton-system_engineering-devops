@@ -5,7 +5,7 @@ import json
 import requests
 
 
-def number_of_subscribers(subreddit):
+def top_ten(subreddit):
     """Number of subscribers"""
     url = "https://www.reddit.com/r/{}/hot.json".format(subreddit)
 
