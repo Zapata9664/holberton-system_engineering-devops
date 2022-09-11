@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""Returns the number of subscribers 
+"""Returns the number of subscribers
 (not active users, total subscribers) for a given subreddit."""
 import json
 import requests
