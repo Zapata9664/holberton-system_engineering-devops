@@ -19,7 +19,6 @@ def request_api(argv):
     user_json = response_user.json()
     name_user = user_json.get("username")
 
-
     dict = {}
     list_json = []
     for index in todo_json:
@@ -36,4 +35,3 @@ def request_api(argv):
 
 if __name__ == "__main__":
     request_api(argv)
-
