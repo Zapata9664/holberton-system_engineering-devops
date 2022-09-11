@@ -1,8 +1,6 @@
 #!/usr/bin/python3
-"""
-Using this REST API, for a given employee ID
-returns information about his/her TODO list progress.
-"""
+""" Using this REST API, for a given employee ID
+returns information about his/her TODO list progress. """
 
 from urllib import response
 import requests
@@ -30,7 +28,7 @@ def request_api(argv):
             my_list = [task['title']]
             task_do += 1
 
-    print(f"Employee {name_user} is done with tasks({task_do}/{task_done})")
+    print(f"Employee {name_user} is done with tasks({task_do}/{task_done}):")
 
     for count in my_list:
         print('\t', str(count))
