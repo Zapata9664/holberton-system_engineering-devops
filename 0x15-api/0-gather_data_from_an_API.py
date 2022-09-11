@@ -4,7 +4,7 @@ import requests
 from sys import argv
 
 
-def request_api(argv):
+def API_request(argv):
     """Module for do request api"""
     todo = "https://jsonplaceholder.typicode.com/todos/?userId=" + str(argv[1])
     users = "https://jsonplaceholder.typicode.com/users/" + str(argv[1])
@@ -32,4 +32,4 @@ def request_api(argv):
 
 
 if __name__ == "__main__":
-    request_api(argv)
+    API_request(argv)
