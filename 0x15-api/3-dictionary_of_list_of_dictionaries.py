@@ -6,16 +6,15 @@ import requests
 from sys import argv
 
 
-def request_api(argv):
+def request_api():
     """Module for do request api"""
 
     user = "https://jsonplaceholder.typicode.com/todos/"
     var = 1
 
     for count in user:
-        user1 = "https://jsonplaceholder.typicode.com/users/{}".format(argv[1])
-        todo = "https://jsonplaceholder.typicode.com/users/{}/todos".format(
-            argv[1])
+        todo = "https://jsonplaceholder.typicode.com/todos/?userId=" + str(var)
+        user1 = "https://jsonplaceholder.typicode.com/users/" + str(var)
 
         response_user = requests.get(user1)
         user_json = response_user.json()
@@ -40,4 +39,4 @@ def request_api(argv):
 
 
 if __name__ == "__main__":
-    request_api(argv)
+    request_api()
